@@ -39,6 +39,7 @@ public class ClassFields {
 			try {
 				//field = current.getDeclaredField(level);
 				field = deepGetField(level, current);
+				if(field == null) break;
 				current = field.getClass();
 			} catch (SecurityException e) {
 				field = null;
